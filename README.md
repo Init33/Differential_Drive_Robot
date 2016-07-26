@@ -4,8 +4,8 @@ This project has code for a self built robot that utilises LIDAR to navigate and
 ##robot.c/robot.h
 These files contains robot peripheral drivers for motors, LIDAR and zigbee comms as well as a main function that the robot operates from. Drivers include serial bus interfacing, data decoding and wireless communications protocol.
 
-#comms.py
+##comms.py
 This file contains the communications protocol for transferring data from the Raspberry Pi to a laptop
 
-#rviz.cpp
+##rviz.cpp
 This file contains ROS code that reads robot data from a file, populates data structures for RVIZ application and	transmits data to the RVIZ service
