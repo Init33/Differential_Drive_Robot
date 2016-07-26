@@ -90,7 +90,6 @@ int main(void)
 			//calculate elapsed time
 			diff = mytime.tv_usec - start;
 		}
-		
 		setspeed(254,0);
 	}	
 }
@@ -128,7 +127,6 @@ int unexpected_obstacles(int distances[], int data_points, int left_speed, int r
 //Reads data from the xbee serial buffer and converts data to speeds and time
 int xbee_receive(int* left_speed, int* right_speed, int* time)
 {
-	
 	char buff[40];
 	char str[10];
 	int temp[3];
@@ -163,8 +161,6 @@ int xbee_receive(int* left_speed, int* right_speed, int* time)
 	*left_speed = temp[0];
 	*right_speed = temp[1];
 	*time = temp[2];
-	
-	
 }
 
 //Initialises the xbee
@@ -187,7 +183,6 @@ int xbee_init(void)
 	options1.c_lflag = 0;
 	tcflush(file, TCIFLUSH);
 	tcsetattr(file, TCSANOW, &options1);
-
 	fcntl(file, F_SETFL, 0);
 	return 0;
 }
@@ -314,14 +309,12 @@ int laser_on(void)
 	printf("LIDAR: sending BM command\n");
 	send_data('B',file2);
 	send_data('M',file2);
-	
 	send_data(';',file2);
 	send_data('c',file2);
 	send_data('h',file2);
 	send_data('e',file2);
 	send_data('c',file2);
 	send_data('k',file2);
-	
 	send_data('\n',file2);
 	//Wait for response
 	printf("LIDAR: waiting for response...\n");
