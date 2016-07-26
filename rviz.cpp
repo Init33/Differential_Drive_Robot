@@ -1,8 +1,7 @@
 /*	
 *		Author: Jesse Nolan
 *		Year: 2015
-*		Description: ROS code that reads robot data from a file, populates data structures for RVIZ application and 
-*									transmits data to the service
+*		Description: see readme
 */
 #include <stdio.h>
 #include <stdlib.h>
